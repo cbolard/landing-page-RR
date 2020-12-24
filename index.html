@@ -99,6 +99,7 @@
     <link rel="stylesheet" href="style-homepage.css">
 
 
+
 </head>
 
 
@@ -111,8 +112,11 @@
 width='0' height='0'>
 </iframe></noscript>
 
- 
 
+        </div>
+    </div>
+</div>
+<div id="overlay" class="overlay hide"></div>
 
     <section id=commercial-section>
 
@@ -132,10 +136,14 @@ width='0' height='0'>
                         <h2 style="margin-top:30px">Passer le <span class="underline--magical">permis</span><br> n'a jamais été <br> aussi simple</h2>
                         <h5 style="margin-bottom:50px">Décroche ton permis en moins de 2 mois pour 749€!</h5>
                         <div class="centrer">
-                        <div id="btn-avis">
-                            <a href="https://fr.trustpilot.com/review/rouleraoule.fr?utm_medium=trustbox&utm_source=Carousel"
-                                target=”_blank” class="btn" id="button-nav">Je m'inscris gratuitement</a>
+                        <div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"  style="border: none;" id="button-nav">
+                                Je m'inscris gratuitement
+                              </button>
+                            
                         </div>
+
+
                     </div>
                         <div class="trustpilot">
                             <div class="trustpilot-widget" data-locale="fr-FR" data-template-id="53aa8912dec7e10d38f59f36"
@@ -167,6 +175,39 @@ width='0' height='0'>
     </section>
 
 
+
+
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              </button>
+            </div>
+            <div class="modal-body">
+                <h3 style="color:#38454c"><span class="underline--magical">En t'inscrivant, tu profiteras </span></h3><br>
+                <ul style="color:#38454c; text-align: left; font-weight: 400;">
+                    <li>De ton tableau de bord élève</li>
+                    <br>
+                    <li>Du guide PDF des "13 erreurs à éviter le jour de l'examen" </li><br>
+                        <li>De trois fiches pédagogiques exclusives offertes :
+                         savoir adapter l'allure et la trajectoire
+                         stationnement en créneau
+                         insertion sur l'autoroute
+                         </li><br>
+                </ul>
+                <form method="submit">
+                    <input type="prénom" placeholder="Nom complet" />
+                    <input type="email" placeholder="exemple@email.com" /><br>
+                    <button class="apply" type="submit" value="subscribe">S'inscrire</button><br>
+                    <button type="button" class="btn close-modal" data-dismiss="modal">Plus tard</button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
     <!-- Les ofrres annexe -->
     <section id=offres-annexes>
 
@@ -310,11 +351,15 @@ width='0' height='0'>
 
             
 
-        </div>             <div class="centrer">
-        <div id="btn-avis">
-            <a href="https://fr.trustpilot.com/review/rouleraoule.fr?utm_medium=trustbox&utm_source=Carousel"
-                target=”_blank” class="btn" id="button-nav">Je m'inscris gratuitement</a>
-        </div>
+        </div>             
+        
+        <div class="centrer">
+            <div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"  style="border: none;" id="button-nav">
+                    Je m'inscris gratuitement
+                  </button>
+                
+            </div>
     </div>
     </section>
 
@@ -409,16 +454,41 @@ width='0' height='0'>
     
                 </div>
                 <div class="centrer">
-                <div id="btn-avis">
-                    <a href="https://fr.trustpilot.com/review/rouleraoule.fr?utm_medium=trustbox&utm_source=Carousel"
-                        target=”_blank” class="btn" id="button-nav">Je m'inscris gratuitement</a>
-                </div>
+                    <div>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"  style="border: none;" id="button-nav">
+                            Je m'inscris gratuitement
+                          </button>
+                        
+                    </div>
             </div>
 
     </section>
 
 
 
+    <script>
+        const openModal = document.querySelector('.open-modal');
+        const closeModal = document.querySelector('.close-modal');
+        const apply = document.querySelector('.apply');
+        const dialog = document.querySelector('dialog');
+        const input = document.querySelector('input');
+        const output = document.querySelector('output');
+
+        input.addEventListener('change', (e) => {
+            apply.value = e.target.value;
+        });
+
+        openModal.addEventListener('click', () => {
+            dialog.showModal();
+        });
+
+        dialog.addEventListener('close', () => {
+            output.value = dialog.returnValue;
+        });
+    </script>
+
+      
+ 
 </body>
 
 </html>
