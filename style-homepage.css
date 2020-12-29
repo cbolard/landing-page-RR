@@ -826,6 +826,17 @@ button {
   font-weight: 550;
 }
 
+.apply{
+  border-radius: 3px ;
+
+  color: #fff;
+  background: linear-gradient(90deg, #ff6b00, #ff9100);
+  padding: 8px 10px;
+  font-weight: 550;
+  font-size: large;
+
+}
+
 .close-modal {
   background: transparent;
   text-decoration: none;
