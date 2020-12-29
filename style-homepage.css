@@ -870,6 +870,7 @@ button {
   margin: auto;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-family: "Hind Madurai", sans-serif;
 }
 
 .trustpilot-comment {
@@ -878,6 +879,7 @@ button {
   text-indent: -140px;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-family: "Hind Madurai", sans-serif;
 }
 
 @media only screen and (max-width: 992px) {
