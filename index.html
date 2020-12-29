@@ -137,7 +137,7 @@ width='0' height='0'>
                         <h5 style="margin-bottom:50px">Décroche ton permis en moins de 2 mois pour 749€!</h5>
                         <div class="centrer">
                         <div>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"  style="border: none;" id="button-nav">
+                            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"  style="border: none;" id="button-prim">
                                 Je m'inscris gratuitement
                               </button>
                             
@@ -179,30 +179,27 @@ width='0' height='0'>
 
       
       <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" onload="setFocus();">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              </button>
-            </div>
             <div class="modal-body">
-                <h3 style="color:#38454c"><span class="underline--magical">En t'inscrivant, tu profiteras </span></h3><br>
-                <ul style="color:#38454c; text-align: left; font-weight: 400;">
-                    <li>De ton tableau de bord élève</li>
+                <h3 style="color:#38454c"><span class="underline--magical">Rejoins Roule Raoule&nbsp;! </span></h3><br>
+                <!-- <ul style="color:#38454c; text-align: left; font-weight: 400;">
+                    <li><span class="dot"></span>  De ton tableau de bord élève</li>
                     <br>
-                    <li>Du guide PDF des "13 erreurs à éviter le jour de l'examen" </li><br>
-                        <li>De trois fiches pédagogiques exclusives offertes :
-                         savoir adapter l'allure et la trajectoire
-                         stationnement en créneau
-                         insertion sur l'autoroute
+                    <li>
+                        <span class="dot"></span>  Du guide PDF des "13 erreurs à éviter le jour de l'examen" </li><br>
+                        <li><span class="dot"></span>  De trois fiches pédagogiques exclusives offertes :<br>
+                           <span class="sm-dot"></span> Savoir adapter l'allure et la trajectoire<br>
+                           <span class="sm-dot"></span> Stationnement en créneau<br>
+                           <span class="sm-dot"></span> Insertion sur l'autoroute
                          </li><br>
-                </ul>
+                </ul> -->
                 <form method="submit">
-                    <input type="prénom" placeholder="Nom complet" />
-                    <input type="email" placeholder="exemple@email.com" /><br>
-                    <button class="apply" type="submit" value="subscribe">S'inscrire</button><br>
-                    <button type="button" class="btn close-modal" data-dismiss="modal">Plus tard</button>
+                    <input type="nom" placeholder="Nom" />
+                    <input type="prenom" placeholder="Prénom" />
+                    <input type="email" placeholder="Email" /><br>
+                    <button class="apply" type="submit" value="subscribe">S'inscrire</button>
                 </form>
             </div>
           </div>
@@ -219,9 +216,9 @@ width='0' height='0'>
                             <h4><strong>Le Code en illimité pour 39€ </strong>
                             </h4>
                             <ul>
-                                <li>Où tu veux, quand tu veux</li>
-                                <li>Conforme à l'examen 2020</li>
-                                <li>Plus de 2000 questions mises à jour régulièrement</li>
+                                <li>Où tu veux, quand tu veux.</li>
+                                <li>Conforme à l'examen 2020.</li>
+                                <li>Plus de 2000 questions mises à jour régulièrement.</li>
                             
                             </ul>
 
@@ -232,9 +229,9 @@ width='0' height='0'>
                             <h4><strong>Pack Code + Permis à 749€</strong> <br>
                             </h4>
                             <ul>
-                                <li>Tes heures restantes remboursées</li>
-                                <li>Paiement en 3x possible </li>
-                                <li>Moniteurs expérimentés</li>
+                                <li>Tes heures restantes remboursées.</li>
+                                <li>Paiement en 3x possible.</li>
+                                <li>Moniteurs expérimentés.</li>
                      
                             </ul>
 
@@ -272,7 +269,7 @@ width='0' height='0'>
                 </div>
 
 
-
+<!-- 
                 <div class="trustpilot">
                     <div class="trustpilot-widget" data-locale="fr-FR" data-template-id="53aa8912dec7e10d38f59f36"
                         data-businessunit-id="5e387a74e6e8600001df21f7" data-style-height="130px"
@@ -282,9 +279,35 @@ width='0' height='0'>
                             loading="auto"
                             src="https://widget.trustpilot.com/trustboxes/53aa8912dec7e10d38f59f36/index.html?templateId=53aa8912dec7e10d38f59f36&amp;businessunitId=5e387a74e6e8600001df21f7#locale=fr-FR&amp;styleHeight=130px&amp;styleWidth=100%25&amp;theme=light&amp;stars=1%2C2%2C3%2C4%2C5&amp;reviewLanguages=fr"
                             style="position: relative; height: 130px; width: 300px; border-style: none; display: block; overflow: hidden;"></iframe>
+
+                    </div> -->
+
+                <!-- </div> -->
+
+                <div class="container">
+                <div class="trustpilot-comment">
+
+                    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+                    <div id="trustpilot_widget" class="trustpilot-widget"  data-locale="fr-FR" data-template-id="53aa8912dec7e10d38f59f36"  data-businessunit-id="5e387a74e6e8600001df21f7" data-style-height="240px" data-style-width="100%" data-theme="light" data-stars="4,5" data-schema-type="Organization">
+                    <a href="https://widget.trustpilot.com/trustboxes/53aa8912dec7e10d38f59f36/index.html?templateId=53aa8912dec7e10d38f59f36&amp;businessunitId=5e387a74e6e8600001df21f7#locale=fr-FR&amp;styleHeight=130px&amp;styleWidth=100%25&amp;theme=light&amp;stars=1%2C2%2C3%2C4%2C5&amp;reviewLanguages=fr" target="_blank">Trustpilot</a>
                     </div>
 
+
+                    <!-- <div class="trustpilot-widget" data-locale="fr-FR" data-template-id="53aa8912dec7e10d38f59f36"
+                        data-businessunit-id="5e387a74e6e8600001df21f7" data-style-height="130px"
+                        data-style-width="100%" data-theme="light" data-stars="1,2,3,4,5" data-review-languages="fr"
+                        style="position: relative;">
+                        <iframe frameborder="0" scrolling="no" title="Customer reviews powered by Trustpilot"
+                            loading="auto"
+                            src="https://widget.trustpilot.com/trustboxes/53aa8912dec7e10d38f59f36/index.html?templateId=53aa8912dec7e10d38f59f36&amp;businessunitId=5e387a74e6e8600001df21f7#locale=fr-FR&amp;styleHeight=130px&amp;styleWidth=100%25&amp;theme=light&amp;stars=1%2C2%2C3%2C4%2C5&amp;reviewLanguages=fr"
+                            style="position: relative; left:-200px; height: 130px; width: 300px; border-style: none; display: block; overflow: hidden;"></iframe>
+
+                    </div> -->
+
                 </div>
+            </div>
+                
             </div>
         </div>
 </section>
@@ -306,61 +329,92 @@ width='0' height='0'>
             </div>
         </div>
 
-        <div id="container-avantages" class="container">
-
-            <div class="item" id="item-avantages-1">
-
-                <h5>
-                    <strong style="color: #38454c;">
-                        Prix nettement moins élevés qu'une auto-école classique
-                    </strong><br>
-                </h5>
-                Avec Roule Raoule, économise de l'argent grâce au Pack code + conduite à 749 €.
-            </div>
-
-            <div class="item" id="item-avantages-2">
-
-                <h5>
-                    <strong style="color: #38454c;">
-                        Moins de déplacements
-                    </strong>
-                </h5>
-                Finis les transports en commun ! Réduis tes déplacements en révisant le Code de la route n'importe
-                où !
-            </div>
-            <div class="item" id="item-avantages-1">
-
-                <h5>
-                    <strong style="color: #38454c;">
-                        Maitrise de ton emploi du temps
-                    </strong><br>
-                </h5>
-                Suis ton planning et organise toi comme tu le souhaites. Révise quand tu as envie et gère
-                tes heures de conduite !
-            </div>
-            <div class="item" id="item-avantages-2">
-
-                <h5>
-                    <strong style="color: #38454c;">
-                        Plus de flexibilité
-                    </strong><br>
-                </h5>
-                Avec un point de rendez-vous flexible, réserve tes heures de conduite avec ton moniteur où tu veux,
-                quand tu veux.
-            </div>
-
-            
-
-        </div>             
+        <div class="container-lg">
+            <div class="message_box">
+                <div class="message_logs">
+                    <div class="message friend">
+                        <div class="user-photo"><img src="images/profile3.png" alt=""></div>
+                        <p class="message_chat">J'en ai marre ! Passer le 
+                            permis, c'est trop cher !</p>
+                    </div>
+                    <div class="message self">
+                        <div class="user-photo"><img src="images/profile.png" alt=""></div>
+                        <p class="message_chat">Tu ne connais pas Roule
+                            Raoule ? C'est
+                            seulement 749€. C'est
+                            35% moins cher que 
+                            dans une auto-école 
+                            classique et tu peux faire 
+                            20h de conduite !</p>
+                    </div>
+                    <div class="message friend">
+                        <div class="user-photo"><img src="images/profile3.png" alt=""></div>
+                        <p class="message_chat">Ah c'est pas cher !
+                            Mais je n'aurais jamais le 
+                            temps avec les cours. :/</p>
+                    </div>
+                    <div class="message self">
+                        <div class="user-photo"><img src="images/profile.png" alt=""></div>
+                        <p class="message_chat">En fait, grâce à leur 
+                            plateforme en ligne,
+                            tu peux t'entrainer où
+                            tu veux, quand tu veux !</p>
+                    </div>
+                    <div class="message friend">
+                        <div class="user-photo"><img src="images/profile3.png" alt=""></div>
+                        <p class="message_chat">Une plateforme pour 
+                            passer son permis ? 
+                            Ça doit être compliqué... </p>
+                    </div>
+                    <div class="message self">
+                        <div class="user-photo"><img src="images/profile.png" alt=""></div>
+                        <p class="message_chat">En vérité, rien de plus 
+                            simple. 
+                            Il te suffit de choisir ta 
+                            formule et tu auras accès 
+                            à ton compte tout
+                            de suite. :D</p>
+                    </div>
+                    <div class="message friend">
+                        <div class="user-photo"><img src="images/profile3.png" alt=""></div>
+                        <p class="message_chat">Mais alors qui va être mon 
+                            moniteur ? </p>
+                    </div>
+                    <div class="message self">
+                        <div class="user-photo"><img src="images/profile.png" alt=""></div>
+                        <p class="message_chat">C'est toi qui décide !
+                            Tu peux choisir ton 
+                            moniteur partout en 
+                            France et à l'heure et 
+                            date que tu souhaites! </p>
+                    </div>
+                    <div class="message friend">
+                        <div class="user-photo"><img src="images/profile3.png" alt=""></div>
+                        <p class="message_chat">Alors je vais réussir 
+                            premier coup ?</p>
+                    </div>
+                    <div class="message self">
+                        <div class="user-photo"><img src="images/profile.png" alt=""></div>
+                        <p class="message_chat">Pour cela, tout dépend 
+                            de toi Estelle :P
+                            En tout cas, l'équipe fera
+                            tout son possible pour 
+                            que tu l'ait !  </p>
+                    </div>
+                </div>
+               
         
-        <div class="centrer">
-            <div>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"  style="border: none;" id="button-nav">
-                    Je m'inscris gratuitement
-                  </button>
-                
+                      
+                    
+                        <div style="  text-align: center;
+                        margin: auto;">
+                            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"  style="border: none;" id="button-prim">
+                                Je m'inscris gratuitement
+                              </button>
+                            
+                        </div>
+            
             </div>
-    </div>
     </section>
 
     <!-- Section Youtube -->
@@ -455,7 +509,7 @@ width='0' height='0'>
                 </div>
                 <div class="centrer">
                     <div>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"  style="border: none;" id="button-nav">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"  style="border: none;" id="button-prim">
                             Je m'inscris gratuitement
                           </button>
                         
@@ -466,6 +520,9 @@ width='0' height='0'>
 
 
 
+
+
+
     <script>
         const openModal = document.querySelector('.open-modal');
         const closeModal = document.querySelector('.close-modal');
@@ -473,6 +530,10 @@ width='0' height='0'>
         const dialog = document.querySelector('dialog');
         const input = document.querySelector('input');
         const output = document.querySelector('output');
+
+        function setFocus() {
+            document.getElementById('first').focus();
+        }
 
         input.addEventListener('change', (e) => {
             apply.value = e.target.value;
