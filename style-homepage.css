@@ -790,7 +790,7 @@ input,
 button {
   padding: 8px 20px;
   outline: none;
-   outline: none;
+  outline: none;
   margin-bottom: 5px;
   border-radius: 3px;
   border: 2px solid #eee;
@@ -798,24 +798,22 @@ button {
 }
 
 input:hover {
-border-color: #ff6b00;
-outline: none;
+  border-color: #ff6b00;
+  outline: none;
 }
 
-input:focus { 
+input:focus {
   outline: none !important;
-
 }
-textarea:focus { 
+textarea:focus {
   outline: none !important;
-
 }
 
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 button {
@@ -826,15 +824,14 @@ button {
   font-weight: 550;
 }
 
-.apply{
-  border-radius: 3px ;
+.apply {
+  border-radius: 3px;
 
   color: #fff;
   background: linear-gradient(90deg, #ff6b00, #ff9100);
   padding: 8px 10px;
   font-weight: 550;
   font-size: large;
-
 }
 
 .close-modal {
@@ -1097,6 +1094,60 @@ button {
   display: flex;
   margin-bottom: 33px;
 }
+
+@media only screen and (min-width: 992px) {
+  .message-photo {
+    margin-bottom: 33px;
+    width: 300px;
+    padding: 15px;
+    margin-left: 75px;
+    color: #fff;
+    font-size: 16px;
+    background: linear-gradient(90deg, #29323c, #485563);
+    border-radius: 0px 16px 16px 16px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .message-photo {
+    margin-bottom: 33px;
+    width: 200px;
+    padding: 15px;
+    margin-left: 75px;
+    color: #fff;
+    font-size: 16px;
+    background: linear-gradient(90deg, #29323c, #485563);
+    border-radius: 0px 16px 16px 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .message-photo-self {
+    margin-bottom: 33px;
+    width: 300px;
+    padding: 15px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 16px;
+  background: linear-gradient(90deg, #ff6b00, #ff9900);
+  border-radius: 16px 0px 16px 16px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .message-photo-self {
+    margin-bottom: 33px;
+    width: 200px;
+    padding: 15px;
+
+    color: #fff;
+    font-size: 16px;
+  background: linear-gradient(90deg, #ff6b00, #ff9900);
+  border-radius: 16px 0px 16px 16px;
+  margin-left: 10px;
+  }
+}
+
 .message .user-photo {
   width: 60px;
   height: 60px;
