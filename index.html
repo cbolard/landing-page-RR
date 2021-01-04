@@ -203,18 +203,46 @@ width='0' height='0'>
                 </ul> -->
 
 
+                <form id="app" @submit="checkForm" action="/something" method="post" novalidate="true">
 
-
-                <form id="app"
-                @submit="checkForm" method="post">
                     <div class="field px-2 mb-3 d-none" id="emailHelp">
                         <small class="form-text text-success">Votre compte est dÃ©jÃ  existant. Vous pouvez trouver vos fiches et apprendre la conduite sur votre espace en cliquant <a href="https://monespace.rouleraoule.fr/login">ici</a></small>
                     </div>
-                    <input type="nom" placeholder="Nom" />
-                    <input type="prenom" placeholder="Prénom" />
-                    <input type="email" placeholder="Email" /><br>
+                    <input 
+                    v-model="name"
+                    type="text"
+                    name="name"
+                    placeholder="Nom" />
+                    <input 
+                    v-model="surname"
+                    type="text"
+                    name="surname"
+                    placeholder="Prénom" />
+
+
+
+                    <input
+                    v-model="email"
+                    type="email"
+                    name="email"
+                    placeholder="Email" /><br>
+
+
                     <button class="apply"  type="submit" value="Submit">S'inscrire</button>
+
+                    <p v-if="errors.length">
+                        <b style="size: 9px; color: #ff6b00;">Veuillez corriger les erreurs suivantes :</b>
+                        <ul>
+                          <li style="size: 12px;" v-for="error in errors">{{ error }}</li>
+                        </ul>
+                    </p>
                 </form>
+
+                
+
+
+
+
             </div>
           </div>
         </div>
@@ -584,9 +612,6 @@ width='0' height='0'>
         });
     </script>
 
-<div id="app">
-    {{message}}
-</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -597,10 +622,32 @@ width='0' height='0'>
     const baseurlv2 = "https://app.rouleraoule.fr/"
     const app = new Vue({
       el:'#app',
-      data:{
-          message: "Hello Vue !"
+      data: {
+    errors: [],
+    name: null,
+    surname: null,
+    email: null
+  },
+  methods:{
+    checkForm:function(e) {
+      this.errors = [];
+      if(!this.name) this.errors.push("Nom obligatoire.");
+      if(!this.surname) this.errors.push("Prénom obligatoire.");
+      if(!this.email) {
+        this.errors.push("Email obligatoire.");
+      } else if(!this.validEmail(this.email)) {
+        this.errors.push("Email valide obligatoire.");        
       }
-    })
+      if(!this.errors.length) return true;
+      e.preventDefault();
+    },
+    validEmail:function(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+    }
+  }
+})
+
 
 
 </script>
