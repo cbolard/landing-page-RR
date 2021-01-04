@@ -99,6 +99,12 @@
     <link rel="stylesheet" href="style-homepage.css">
 
 
+    <script type="text/javascript" defer>
+        window.$crisp = []; window.CRISP_WEBSITE_ID = "c09d5d3d-33f0-4894-a567-9a1b3a11d4ef"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+        $crisp.push(['do', 'chat:hide']);
+    </script>
+
+
 
 </head>
 
@@ -195,11 +201,19 @@ width='0' height='0'>
                            <span class="sm-dot"></span> Insertion sur l'autoroute
                          </li><br>
                 </ul> -->
-                <form method="submit">
+
+
+
+
+                <form id="app"
+                @submit="checkForm" method="post">
+                    <div class="field px-2 mb-3 d-none" id="emailHelp">
+                        <small class="form-text text-success">Votre compte est dÃ©jÃ  existant. Vous pouvez trouver vos fiches et apprendre la conduite sur votre espace en cliquant <a href="https://monespace.rouleraoule.fr/login">ici</a></small>
+                    </div>
                     <input type="nom" placeholder="Nom" />
                     <input type="prenom" placeholder="Prénom" />
                     <input type="email" placeholder="Email" /><br>
-                    <button class="apply"  type="submit" value="subscribe">S'inscrire</button>
+                    <button class="apply"  type="submit" value="Submit">S'inscrire</button>
                 </form>
             </div>
           </div>
@@ -337,6 +351,7 @@ width='0' height='0'>
                         <p class="message_chat">🎉🎉💪💪🍾🍾😀😀</p>
                     </div>
                     <div class="message-photo-self self">
+
                         <p class="message_chat">
                             <img src="images/permis-photo.png" width="100%" height="100%">
                         </p>
@@ -544,10 +559,6 @@ width='0' height='0'>
     </section>
 
 
-
-
-
-
     <script>
         const openModal = document.querySelector('.open-modal');
         const closeModal = document.querySelector('.close-modal');
@@ -573,7 +584,26 @@ width='0' height='0'>
         });
     </script>
 
-      
+<div id="app">
+    {{message}}
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+
+<script>
+    const baseurlv2 = "https://app.rouleraoule.fr/"
+    const app = new Vue({
+      el:'#app',
+      data:{
+          message: "Hello Vue !"
+      }
+    })
+
+
+</script>
  
 </body>
 
